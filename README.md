@@ -44,6 +44,8 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 ## Tips
 
+- I use the 'Standard' theme with a base font of Helvetica 14pt. All-black everything. No note handles, no project handles, no projects list vertical divider.
+
 - Do a review of all of the panels at the end of each day or each week to stay on top of it and get rid of things you'll never do.
 
 - Use the Quick Entry window in TaskPaper to add tasks for later sorting. The first time the Quick Entry window comes up, set the destination document to 'Todo.taskpaper' and it will end up at the top of that document, above the **↑ Inbox** heading.
