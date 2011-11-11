@@ -14,6 +14,7 @@ In order of importance:
 
 - 'next month' button
 - 'now' button
+- Take care of backslashes and other quoted characters.
 - Using cookies for storage is OK, but only if the user always uses the same browser. LocalStorage has the same problem. Use a text file in the directory?
 - way to set events on the last day of month (because it changes).
 - The plaintext list should allow for notes below items.
@@ -21,10 +22,14 @@ In order of importance:
 
 */
 
-
 // If a new 'items' value was set, update the cookie. Expiration is one year, and should always be enough, since this will be set by this script running at least once a month.
-if ($_REQUEST['items'])
-  setcookie('items', $_REQUEST['items'], time()+315569260);
+if ($_REQUEST['items_text'])
+{
+  setcookie('items', $_REQUEST['items_text'], time() + 315569260);
+
+  // Reload the page, since we just set a cookie.
+  header('Location: ' . $_SERVER['SCRIPT_NAME']);
+}
 
 // If the cookie exists, get its value. Otherwise populate the items with sample data.
 if ($_COOKIE['items'])
@@ -66,29 +71,33 @@ $year = $_REQUEST['year'];
       height: 100%;
       margin: 0;
       padding: 0;
+      overflow: hidden;
     }
 
     body
     {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
+      min-height: 100%;
     }
 
     form
     {
       float: left;
       background: #eee;
-      padding: 1%;
       width: 48%;
-      height: 100%;
+      padding: 1%;
+      height: 98%;
     }
 
     form textarea
     {
+      border: 0;
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
-      height: 90%;
-      width: 99%;
+      height: 88%;
+      width: 98%;
+      padding: 1%;
       resize: none;
     }
 
@@ -97,7 +106,7 @@ $year = $_REQUEST['year'];
     {
       float: left;
       font-size: 16px;
-      margin: 1em 1em 1em 0;
+      margin: 1em 1em 0 0;
     }
 
     textarea.taskpaper_month
@@ -108,7 +117,7 @@ $year = $_REQUEST['year'];
       border: 0;
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.2;
+
       padding: 1%;
       resize: none;
     }
@@ -116,7 +125,7 @@ $year = $_REQUEST['year'];
   </head>
   <body>
     <form action="./generate_taskpaper_month.php" method="post">
-      <textarea name="items"><?php print($items_plaintext); ?></textarea>
+      <textarea name="items_text"><?php print($items_plaintext); ?></textarea>
 
       <select name="month">
         <?php
@@ -156,7 +165,7 @@ $year = $_REQUEST['year'];
       <input type="submit" value="Go">
     </form>
 
-<textarea class="taskpaper_month" onclick="this.select();"><?php
+<textarea class="taskpaper_month" readonly onclick="this.select();"><?php
 
 if ($month)
   $days = date('t', mktime(0, 0, 0, $month, 1, date('Y')));
