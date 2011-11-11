@@ -54,34 +54,42 @@ $this_day = date('d');
 // Capture POST and GET.
 $month = $_REQUEST['month'];
 $year = $_REQUEST['year'];
-?>
+?><!doctype html>
 
 <html>
   <head>
     <title>Taskpaper Month Generator</title>
     <style>
+    html,
+    body
+    {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body
     {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
-      margin: 1em;
     }
 
     form
     {
       float: left;
       background: #eee;
-      margin-right: 5%;
       padding: 1%;
-      width: 43%;
+      width: 48%;
+      height: 100%;
     }
 
     form textarea
     {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
-      height: 80%;
-      width: 100%;
+      height: 90%;
+      width: 99%;
+      resize: none;
     }
 
     form select,
@@ -95,13 +103,14 @@ $year = $_REQUEST['year'];
     textarea.taskpaper_month
     {
       float: left;
-      height: 95%;
-      width: 50%;
+      height: 98%;
+      width: 48%;
       border: 0;
       font-family: Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.2;
-      padding: 0;
+      padding: 1%;
+      resize: none;
     }
     </style>
   </head>
