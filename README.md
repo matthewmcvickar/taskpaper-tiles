@@ -12,7 +12,7 @@ This system works with the wonderfully simple [TaskPaper](http://www.hogbaysoftw
 
 All projects, tasks, events, and notes are listed in one of five windows, or 'tiles': **Monthly**, **Weekly**, **Today**, **Todo**, **Money**, and **Scratchpad**. The entire set of five tiles is referenced repeatedly throughout the day as necessary. Enter your tasks in whichever tile you deem appropriate, and reorganize/add/edit/delete them as you work.
 
-The screenshot above shows my recommended placement and size for each window. Adjust as necessary.
+The screenshot above shows my recommended placement and size for each tile. Adjust as necessary.
 
 ## The Tiles
 
@@ -46,6 +46,8 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 - I use the 'Standard' theme with a base font of Helvetica 14pt. All-black everything. No note handles, no project handles, no projects list vertical divider.
 
+- The perfect placement of the tiles is accomplished with [Divvy](http://mizage.com/divvy/).
+
 - Do a review of all of the panels at the end of each day or each week to stay on top of it and get rid of things you'll never do.
 
 - Use the Quick Entry window in TaskPaper to add tasks for later sorting. The first time the Quick Entry window comes up, set the destination document to 'Todo.taskpaper' and it will end up at the top of that document, above the **↑ Inbox** heading.
@@ -63,7 +65,7 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 ## TODO:
 
 - Create an installation script.
-	- Set the window position and sizes.
+	- Set the tile position and sizes.
 	- Set up some of the recommended usage in the 'Tips' section above?
 - Improve the month generator (see the TODOs at the top of that file).
 - Design a custom stylesheet.
