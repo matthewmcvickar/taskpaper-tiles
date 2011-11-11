@@ -60,8 +60,6 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 - Store notes and ideas in [Notational Velocity](http://notational.net/). 'Someday/Maybe' tasks don't belong in here — they take up space and you shouldn't look at them every day.
 
----
-
 ## TODO:
 
 - Create an installation script.
