@@ -44,7 +44,7 @@ foreach ($items as $key => $value)
   $items[$key] = explode("\n", trim($value));
 
 // Set timezone so that PHP doesn't freak out.
-date_default_timezone_set('Pacific/Honolulu');
+date_default_timezone_set('UTC');
 
 // Some defaults.
 $this_year = date('Y');
