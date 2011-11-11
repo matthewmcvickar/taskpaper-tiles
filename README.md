@@ -12,7 +12,7 @@ This system works with the wonderfully simple [TaskPaper](http://www.hogbaysoftw
 
 All projects, tasks, events, and notes are listed in one of five windows, or 'tiles': **Monthly**, **Weekly**, **Today**, **Todo**, **Money**, and **Scratchpad**. The entire set of five tiles is referenced repeatedly throughout the day as necessary. Enter your tasks in whichever tile you deem appropriate, and reorganize/add/edit/delete them as you work.
 
-The screenshot above shows my recommended placement and size for each window. I encourage experimentation.
+The screenshot above shows my recommended placement and size for each window. Adjust as necessary.
 
 ## The Tiles
 
