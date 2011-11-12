@@ -52,9 +52,6 @@ foreach ($items as $key => $value)
 // Set timezone so that PHP doesn't freak out.
 date_default_timezone_set('UTC');
 
-// Capture parameters and POST variables.
-$month = $_REQUEST['month'];
-$year = $_REQUEST['year'];
 ?><!doctype html>
 
 <html>
@@ -129,7 +126,7 @@ $year = $_REQUEST['year'];
 
           print("<option value=\"$i\"");
 
-          if ($i == $month)
+          if ($i == $_REQUEST['month'])
             print(' selected');
           elseif ($i == date('m'))
             print(' selected');
@@ -145,7 +142,7 @@ $year = $_REQUEST['year'];
         {
           print("<option value=\"$i\"");
 
-          if ($i == $year)
+          if ($i == $_REQUEST['year'])
             print(' selected');
           elseif ($i == date('Y'))
             print(' selected');
@@ -162,20 +159,20 @@ $year = $_REQUEST['year'];
 
     <textarea class="taskpaper_month" readonly onclick="this.select();"><?php
 
-    if ($month)
-      $days = date('t', mktime(0, 0, 0, $month, 1, date('Y')));
-    elseif ($month && $year)
-      $days = date('t', mktime(0, 0, 0, $month, 1, $year));
+    if ($_REQUEST['month'])
+      $days = date('t', mktime(0, 0, 0, $_REQUEST['month'], 1, date('Y')));
+    elseif ($_REQUEST['month'] && $_REQUEST['year'])
+      $days = date('t', mktime(0, 0, 0, $_REQUEST['month'], 1, $_REQUEST['year']));
     else
       $days = date('t', mktime(0, 0, 0, date('m'), 1, date('Y')));
 
     for($day = 1; $day <= $days; $day++)
     {
-      if ($month)
-        print("\n" . date('d l', mktime(0, 0, 0, $month, $day, date('Y'))) . ':');
+      if ($_REQUEST['month'])
+        print("\n" . date('d l', mktime(0, 0, 0, $_REQUEST['month'], $day, date('Y'))) . ':');
 
-      elseif ($month && $year)
-        print("\n" . date('d l', mktime(0, 0, 0, $month, $day, $year)) . ':');
+      elseif ($_REQUEST['month'] && $_REQUEST['year'])
+        print("\n" . date('d l', mktime(0, 0, 0, $_REQUEST['month'], $day, $_REQUEST['year'])) . ':');
 
       else
         print("\n" . date('d l', mktime(0, 0, 0, date('m'), $day, date('Y'))) . ':');
