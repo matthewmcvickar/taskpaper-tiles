@@ -66,7 +66,6 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 ### 2011-11-11
 
-- Added a download on GitHub for the whole folder.
 - Refined the syntax on the recurring item field of the month generator script to be two returns after a list of items under a day, no indentation for items under days. Like this:
 
 			1
