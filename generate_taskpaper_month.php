@@ -35,7 +35,7 @@ if ($_REQUEST['items_text'])
 if ($_COOKIE['items'])
   $items_plaintext = $_COOKIE['items'];
 else
-  $items_plaintext = "1\n  foo bar baz\n14\n  lorem ipsum\n30\n  dolor sit\n  amet\n  adispicium";
+  $items_plaintext = "1\nfoo bar baz\n\n14\nlorem ipsum\n\n30\ndolor sit\namet\nadispicium";
 
 // Create a flat array from the plaintext above by splitting the text by newlines that contain a number.
 $items_array = preg_split('~\n([0-9]+)~', "\n" . $items_plaintext, NULL, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
@@ -106,7 +106,7 @@ $year = $_REQUEST['year'];
     {
       float: left;
       font-size: 16px;
-      margin: 1em 1em 0 0;
+      margin: 0 1em 1em 0;
     }
 
     textarea.taskpaper_month
@@ -125,8 +125,6 @@ $year = $_REQUEST['year'];
   </head>
   <body>
     <form action="./generate_taskpaper_month.php" method="post">
-      <textarea name="items_text"><?php print($items_plaintext); ?></textarea>
-
       <select name="month">
         <?php
         for ($i = 1; $i < 13; $i++)
@@ -162,7 +160,9 @@ $year = $_REQUEST['year'];
         ?>
       </select>
 
-      <input type="submit" value="Go">
+      <input type="submit" value="Update">
+
+      <textarea name="items_text"><?php print($items_plaintext); ?></textarea>
     </form>
 
 <textarea class="taskpaper_month" readonly onclick="this.select();"><?php
