@@ -62,6 +62,26 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 - Store notes and ideas in [Notational Velocity](http://notational.net/). 'Someday/Maybe' tasks don't belong in here — they take up space and you shouldn't look at them every day.
 
+## Version History
+
+### 2011-11-11
+
+- Added a download on GitHub for the whole folder.
+- Refined the syntax on the recurring item field of the month generator script to be two returns after a list of items under a day, no indentation for items under days. Like this:
+
+			1
+			lorem ipsum
+			dolor sit
+
+			14
+			adispicium elit
+- Put the dropdown fields and submit button above the recurring items field.
+
+### 2011-11-10
+
+- Made my existing system into a project.
+- Refined the month generator script into something usable without editing underlying code.
+
 ## TODO:
 
 - Create an installation script.
