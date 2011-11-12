@@ -60,6 +60,8 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 	1. I mark them with time as I'm working for time-reporting purposes.
 	2. I send the entire list to [iDoneThis](http://idonethis.com/) every night.
 
+- For extended, complex, and collaborative projects (like website or application development), I use issue trackers and collaborative project management software (like Basecamp or GitHub). TaskPaper Tiles is for everything else. (Although I do keep a short list of my own, current and upcoming tasks for those kinds of projects in TaskPaper, and use it as a place to enter tasks quickly for later organization into a collaborative system.)
+
 - Store notes and ideas in [Notational Velocity](http://notational.net/). 'Someday/Maybe' tasks don't belong in here — they take up space and you shouldn't look at them every day.
 
 ## Version History
