@@ -170,10 +170,8 @@ date_default_timezone_set('UTC');
     {
       if ($_REQUEST['month'])
         print("\n" . date('d l', mktime(0, 0, 0, $_REQUEST['month'], $day, date('Y'))) . ':');
-
       elseif ($_REQUEST['month'] && $_REQUEST['year'])
         print("\n" . date('d l', mktime(0, 0, 0, $_REQUEST['month'], $day, $_REQUEST['year'])) . ':');
-
       else
         print("\n" . date('d l', mktime(0, 0, 0, date('m'), $day, date('Y'))) . ':');
 
