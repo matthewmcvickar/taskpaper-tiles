@@ -4,7 +4,8 @@
 
 # Generate Taskpaper Month
 
-By Matthew McVickar
+Part of the Taskpaper Tiles system by Matthew McVickar
+https://github.com/matthewmcvickar/taskpaper-tiles
 
 Creates a month list for the requested month and year (or the current month and year, if unspecified) in TaskPaper, populating days with items as specified in the plaintext hierarchy below.
 
@@ -37,7 +38,7 @@ if ($_COOKIE['items'])
 else
   $items_plaintext = "1\nfoo bar baz\n\n14\nlorem ipsum\n\n30\ndolor sit\namet\nadispicium";
 
-// Create a flat array from the plaintext above by splitting the text by newlines that contain a number.
+// Create a flat array from the plain text in the cookie above by splitting it by newlines that contain a number.
 $items_array = preg_split('~\n([0-9]+)~', "\n" . $items_plaintext, NULL, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
 // Build a multidimensional array from the flat one by iterating through odd and even numbers in the array.
@@ -51,12 +52,7 @@ foreach ($items as $key => $value)
 // Set timezone so that PHP doesn't freak out.
 date_default_timezone_set('UTC');
 
-// Some defaults.
-$this_year = date('Y');
-$this_month = date('m');
-$this_day = date('d');
-
-// Capture POST and GET.
+// Capture parameters and POST variables.
 $month = $_REQUEST['month'];
 $year = $_REQUEST['year'];
 ?><!doctype html>
@@ -76,7 +72,7 @@ $year = $_REQUEST['year'];
 
     body
     {
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: Helvetica, sans-serif;
       font-size: 16px;
       min-height: 100%;
     }
@@ -93,7 +89,7 @@ $year = $_REQUEST['year'];
     form textarea
     {
       border: 0;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: Helvetica, sans-serif;
       font-size: 16px;
       height: 88%;
       width: 98%;
@@ -115,9 +111,8 @@ $year = $_REQUEST['year'];
       height: 98%;
       width: 48%;
       border: 0;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: Helvetica, sans-serif;
       font-size: 16px;
-
       padding: 1%;
       resize: none;
     }
@@ -132,11 +127,11 @@ $year = $_REQUEST['year'];
           if ($i < 10)
             $i = '0' . $i;
 
-          print("\n<option value=\"$i\"");
+          print("<option value=\"$i\"");
 
           if ($i == $month)
             print(' selected');
-          elseif ($i == $this_month)
+          elseif ($i == date('m'))
             print(' selected');
 
           print('>' . date('F', mktime(0, 0, 0, $i, 1, 1)) . '</option>');
@@ -146,13 +141,13 @@ $year = $_REQUEST['year'];
 
       <select name="year">
         <?php
-        for ($i = $this_year; $i <= $this_year + 1; $i++)
+        for ($i = date('Y'); $i <= date('Y') + 1; $i++)
         {
-          print("\n<option value=\"$i\"");
+          print("<option value=\"$i\"");
 
           if ($i == $year)
             print(' selected');
-          elseif ($i == $this_year)
+          elseif ($i == date('Y'))
             print(' selected');
 
           print('>' . $i . '</option>');
@@ -165,39 +160,33 @@ $year = $_REQUEST['year'];
       <textarea name="items_text"><?php print($items_plaintext); ?></textarea>
     </form>
 
-<textarea class="taskpaper_month" readonly onclick="this.select();"><?php
+    <textarea class="taskpaper_month" readonly onclick="this.select();"><?php
 
-if ($month)
-  $days = date('t', mktime(0, 0, 0, $month, 1, date('Y')));
-elseif ($month && $year)
-  $days = date('t', mktime(0, 0, 0, $month, 1, $year));
-else
-  $days = date('t', mktime(0, 0, 0, date('m'), 1, date('Y')));
+    if ($month)
+      $days = date('t', mktime(0, 0, 0, $month, 1, date('Y')));
+    elseif ($month && $year)
+      $days = date('t', mktime(0, 0, 0, $month, 1, $year));
+    else
+      $days = date('t', mktime(0, 0, 0, date('m'), 1, date('Y')));
 
-for($day = 1; $day <= $days; $day++)
-{
-  if ($month)
-    print('
-' . date('d l', mktime(0, 0, 0, $month, $day, date('Y'))) . ':');
+    for($day = 1; $day <= $days; $day++)
+    {
+      if ($month)
+        print("\n" . date('d l', mktime(0, 0, 0, $month, $day, date('Y'))) . ':');
 
-  elseif ($month && $year)
-    print('
-' . date('d l', mktime(0, 0, 0, $month, $day, $year)) . ':');
+      elseif ($month && $year)
+        print("\n" . date('d l', mktime(0, 0, 0, $month, $day, $year)) . ':');
 
-  else
-    print('
-' . date('d l', mktime(0, 0, 0, date('m'), $day, date('Y'))) . ':');
+      else
+        print("\n" . date('d l', mktime(0, 0, 0, date('m'), $day, date('Y'))) . ':');
 
-  if ($items[$day])
-    foreach ($items[$day] as $item)
-      print("\n\t- " . trim($item));
+      if ($items[$day])
+        foreach ($items[$day] as $item)
+          print("\n\t- " . trim($item));
 
-  if ($day == $days)
-    print("
-\t- generate new Taskpaper month
-\t\thttp://localhost/taskpaper-tiles/generate_taskpaper_month.php?month=" . date('m', strtotime('next month')));
-}
-
-?></textarea>
+      if ($day == $days)
+        print("\n\t- generate new Taskpaper month\n\t\thttp://localhost/taskpaper-tiles/generate_taskpaper_month.php?month=" . date('m', strtotime('next month')));
+    }
+    ?></textarea>
   </body>
 </html>
