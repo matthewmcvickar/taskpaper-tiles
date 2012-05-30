@@ -116,7 +116,7 @@ date_default_timezone_set('UTC');
     </style>
   </head>
   <body>
-    <form action="./generate_taskpaper_month.php" method="post">
+    <form action="<?php echo $_SERVER['SCRIPT_NAME'] ?>" method="post">
       <select name="month">
         <?php
         for ($i = 1; $i < 13; $i++)
