@@ -180,7 +180,7 @@ date_default_timezone_set('UTC');
           print("\n\t- " . trim($item));
 
       if ($day == $days)
-        print("\n\t- generate new Taskpaper month\n\t\thttp://localhost/taskpaper-tiles/generate_taskpaper_month.php?month=" . date('m', strtotime('next month')));
+        print("\n\t- generate new Taskpaper month\n\t\thttp://localhost/matthewmcvickar/taskpaper-tiles/generate_taskpaper_month.php?month=" . date('m', strtotime('next month')));
     }
     ?></textarea>
   </body>
