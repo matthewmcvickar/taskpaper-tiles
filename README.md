@@ -66,16 +66,28 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 ## Version History
 
+### 2013-04-02
+
+- Made it so that notes can be added under a task in the calendar syntax by prefacing the note with two spaces, like so:
+    ```
+    25
+    task
+      note
+    another task
+    ```
+- Moved todos from the top of the calendar generator PHP script into Issues on GitHub.
+
 ### 2011-11-11
 
 - Refined the syntax on the recurring item field of the month generator script to be two returns after a list of items under a day, no indentation for items under days. Like this:
-
+    ```
 		1
 		lorem ipsum
 		dolor sit
 
 		14
 		adispicium elit
+    ```
 - Put the dropdown fields and submit button above the recurring items field.
 
 ### 2011-11-10

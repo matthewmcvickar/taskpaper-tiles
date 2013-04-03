@@ -9,18 +9,6 @@ https://github.com/matthewmcvickar/taskpaper-tiles
 
 Creates a month list for the requested month and year (or the current month and year, if unspecified) in TaskPaper, populating days with items as specified in the plaintext hierarchy below.
 
-## TODO
-
-In order of importance:
-
-- 'next month' button
-- 'now' button
-- Take care of backslashes and other quoted characters.
-- Using cookies for storage is OK, but only if the user always uses the same browser. LocalStorage has the same problem. Use a text file in the directory?
-- way to set events on the last day of month (because it changes).
-- The plaintext list should allow for notes below items.
-- Is the code that generates the list too ugly?
-
 */
 
 // If a new 'items' value was set, update the cookie. Expiration is one year, and should always be enough, since this will be set by this script running at least once a month.
@@ -176,8 +164,15 @@ date_default_timezone_set('UTC');
         print("\n" . date('d l', mktime(0, 0, 0, date('m'), $day, date('Y'))) . ':');
 
       if ($items[$day])
+      {
         foreach ($items[$day] as $item)
-          print("\n\t- " . trim($item));
+        {
+          if (substr($item, 0, 2) === '  ')
+            print("\n\t\t" . trim($item));
+          else  
+            print("\n\t- " . trim($item));
+        }
+      }
 
       if ($day == $days)
         print("\n\t- generate new Taskpaper month\n\t\thttp://localhost/matthewmcvickar/taskpaper-tiles/generate_taskpaper_month.php?month=" . date('m', strtotime('next month')));
