@@ -5,7 +5,7 @@
 # Generate Taskpaper Month
 
 Part of the Taskpaper Tiles system by Matthew McVickar
-https://github.com/matthewmcvickar/taskpaper-tiles
+https://github.com/matthewmcvickar/taskpapertiles
 
 Creates a month list for the requested month and year (or the current month and year, if unspecified) in TaskPaper, populating days with items as specified in the plaintext hierarchy below.
 

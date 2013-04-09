@@ -4,7 +4,7 @@
 
 An organizational method and task management system that uses TaskPaper and a few scripts. It is lightweight, easy, and unobtrusive. I use this system as-is every day, but please consider it a starting point rather than dogma. **You should use whichever set of methods and tools helps you work the most effectively.** I encourage experimentation and customization, but only as much as it takes to feel comfortable in the system and then get [back to work](http://5by5.tv/b2w).
 
-![Taskpaper Screenshot](https://github.com/matthewmcvickar/taskpaper-tiles/blob/master/screenshot.png?raw=true)
+![Taskpaper Screenshot](https://github.com/matthewmcvickar/taskpapertiles/blob/master/screenshot.png?raw=true)
 
 ## The Basics
 
