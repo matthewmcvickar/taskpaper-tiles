@@ -10,11 +10,19 @@ An organizational method and task management system that uses TaskPaper and a fe
 
 This system works with the wonderfully simple [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper).
 
-All projects, tasks, events, and notes are listed in one of five windows, or 'tiles': **Monthly**, **Weekly**, **Today**, **Todo**, **Money**, and **Scratchpad**. The entire set of five tiles is referenced repeatedly throughout the day as necessary. Enter your tasks in whichever tile you deem appropriate, and reorganize/add/edit/delete them as you work.
+All projects, tasks, events, and notes are listed in one of five windows, or 'tiles': **Todo**, **Daily**, **Monthly**, **Waiting**, and **Scratchpad**. The entire set of five tiles is referenced repeatedly throughout the day as necessary. Enter your tasks in whichever tile you deem appropriate, and reorganize/add/edit/delete them as you work.
 
 The screenshot above shows my recommended placement and size for each tile. Adjust as necessary.
 
 ## The Tiles
+
+### Todo
+
+Every task that isn't recurring, doesn't have a scheduled date, and isn't in another task management system like Basecamp or GitHub stays here. These are personal todos--for hobbies, side-projects, or certain freelance work. I use the TaskPaper table-of-contents sidebar to break it up. At the very bottom of this list is the Someday/Maybe pile.
+
+### Daily
+
+A heading for things that recur each day of the week, as well as things to be done each morning and night or on a certain day. My two lists in here are 'Daily' and 'Sunday'.
 
 ### Monthly
 
@@ -22,21 +30,9 @@ A heading for each day of the month. If you're familiar with [GTD](http://www.da
 
 This list can be generated using the [TaskPaper Month Generator](http://taskpaper-month-generator.herokuapp.com) (which has its [own repository](https://github.com/matthewmcvickar/taskpaper-month-generator)). You can use a very simple syntax to add tasks to the generated month.
 
-### Weekly
+### Waiting
 
-A heading for things that recur each weekday, as well as things to be done each morning and night.
-
-### Today
-
-Things intended to be done today. This tile is small on purpose.
-
-### Todo
-
-Every task that isn't recurring and doesn't have a scheduled date. I typically move items from **Todo** into **Today** at the end of each day to prepare for tomorrow. I try not to let this tile scroll (keep todos to a minimum).
-
-### Finance
-
-Keeping track of bills to pay and income owed. This is a recent addition and I don't know if it will survive, but it's useful if you don't have another bookkeeping system. (I use this tile, a Numbers.app file with a half-dozen spreadsheets in it, Mint, and a few envelopes in my closet.)
+Keep track of incoming postal packages, money owed, and entertainment with a release date--things you have no direct control over but of which you want to keep track.
 
 ### Scratchpad
 
@@ -48,26 +44,23 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 - The perfect placement of the tiles is accomplished with [Divvy](http://mizage.com/divvy/).
 
-- Do a review of all of the panels at the end of each day or each week to stay on top of it and get rid of things you'll never do.
+- Do a review of all of the panels at the end of each week to stay on top of it and get rid of things you'll never do. I have **Taskpaper Review** in my **Sunday** list in the **Weekly** list.
 
-- Use the Quick Entry window in TaskPaper to add tasks for later sorting. The first time the Quick Entry window comes up, set the destination document to 'Todo.taskpaper' and it will end up at the top of that document, above the **↑ Inbox** heading.
+- You can use the Quick Entry window in TaskPaper to add tasks for later sorting. I set the destination document as **Scratchpad**.
 
-- Set a keyboard shortcut to open and hide TaskPaper so that you can get to it (and then get out of it) instantly. I use F5. The AppleScript included will do this. To activate it with a key you can turn it into a service and attach a keyboard shortcut in the Keyboard panel of System Preferences, use [FastScripts](http://www.red-sweater.com/fastscripts/), or use your application launcher of choice (I use [Alfred](http://www.alfredapp.com/)).
+- Set a keyboard shortcut to open and hide TaskPaper so that you can get to it (and then get out of it) instantly. I use F5. The included AppleScript will do this. To activate it with a key, you can turn it into a service and attach a keyboard shortcut in the Keyboard panel of System Preferences, use [FastScripts](http://www.red-sweater.com/fastscripts/), or use your application launcher of choice (I use [Alfred](http://www.alfredapp.com/)).
 
-- Store the five .taskpaper documents in a Dropbox folder so that they are backed up, versioned, and accessible from anywhere.
-
-- You may choose to use TaskPaper's built in task-management capabilities to mark things as done. Or you can just delete them. I keep finished tasks around until the end of the day for two reasons:
-	1. I mark them with time as I'm working for time-reporting purposes.
-	2. I send the entire list to [iDoneThis](http://idonethis.com/) every night.
+- Store the five `.taskpaper` documents in a Dropbox folder so that they are backed up, versioned, and accessible from anywhere, like the Taskpaper iOS app.
 
 - For extended, complex, and collaborative projects (like website or application development), I use issue trackers and collaborative project management software (like Basecamp or GitHub). TaskPaper Tiles is for everything else. (Although I do keep a short list of my own, current and upcoming tasks for those kinds of projects in TaskPaper, and use it as a place to enter tasks quickly for later organization into a collaborative system.)
 
-- Store notes and ideas in [Notational Velocity](http://notational.net/). 'Someday/Maybe' tasks don't belong in here — they take up space and you shouldn't look at them every day.
+- Store notes and ideas in [Notational Velocity](http://notational.net/). Extended sets of notes don't belong in TaskPaper Tiles; the idea is easily-manageable brevity.
 
 ## Version History
 
 ### 2013-04-29
 
+- Updated the screenshot, readme, and `.taskpaper` files to reflect my current usage.
 - Removed the PHP script that generates months and moved it to its own repository: **[taskpaper-month-generator](https://github.com/matthewmcvickar/taskpaper-month-generator)**. The TaskPaper Month Generator is also running as an app on Heroku: [taskpaper-month-generator.herokuapp.com](http://taskpaper-month-generator.herokuapp.com).
 
 ### 2013-04-02
