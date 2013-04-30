@@ -94,12 +94,3 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 - Made my existing system into a project.
 - Refined the month generator script into something usable without editing underlying code.
-
-## TODO:
-
-- Create an installation script.
-	- Set the tile position and sizes.
-	- Set up some of the recommended usage in the 'Tips' section above?
-- Improve the month generator (see the TODOs at the top of that file).
-- Design a custom stylesheet.
-- Make a website that explains this better.
