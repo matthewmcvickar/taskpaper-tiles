@@ -20,7 +20,7 @@ The screenshot above shows my recommended placement and size for each tile. Adju
 
 A heading for each day of the month. If you're familiar with [GTD](http://www.davidco.com/about-gtd), this is something of a tickler file. You can move tasks into this tile from **Todo** if you want to schedule them for a particular day. I use **Monthly** for tasks and all of my events and appointments.
 
-The `generate_taskpaper_month.php` script is used to generate this list, complete with a customizable set of tasks that repeat on specified days each month — you can run it on your website or localhost.
+This list can be generated using the [TaskPaper Month Generator](http://taskpaper-month-generator.herokuapp.com) (which has its [own repository](https://github.com/matthewmcvickar/taskpaper-month-generator)). You can use a very simple syntax to add tasks to the generated month.
 
 ### Weekly
 
@@ -65,6 +65,10 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 - Store notes and ideas in [Notational Velocity](http://notational.net/). 'Someday/Maybe' tasks don't belong in here — they take up space and you shouldn't look at them every day.
 
 ## Version History
+
+### 2013-04-29
+
+- Removed the PHP script that generates months and moved it to its own repository: **[taskpaper-month-generator](https://github.com/matthewmcvickar/taskpaper-month-generator)**. The TaskPaper Month Generator is also running as an app on Heroku: [taskpaper-month-generator.herokuapp.com](http://taskpaper-month-generator.herokuapp.com).
 
 ### 2013-04-02
 
