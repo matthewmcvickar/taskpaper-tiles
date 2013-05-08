@@ -4,6 +4,8 @@
 
 [Version History](https://github.com/matthewmcvickar/taskpapertiles/wiki/Version-History)
 
+## What Is This?
+
 An organizational method and task management system that uses TaskPaper and a few scripts. It is lightweight, easy, and unobtrusive. I use this system as-is every day, but please consider it a starting point rather than dogma. **You should use whichever set of methods and tools helps you work the most effectively.** I encourage experimentation and customization.
 
 ![Taskpaper Screenshot](https://github.com/matthewmcvickar/taskpapertiles/blob/master/screenshot.png?raw=true)
@@ -42,7 +44,7 @@ Absolutely anything can go here. I don't let anything stay for more than a day o
 
 ## Tips
 
-- I use the 'Standard' theme with a base font of Helvetica 14pt. All-black everything. No note handles, no project handles, no projects list vertical divider.
+- I use the 'Standard' theme with a base font of Helvetica 14pt. All black text. No note handles, no project handles, a project list vertical divider only for the **Todo** tile.
 
 - The perfect placement of the tiles is accomplished with [Divvy](http://mizage.com/divvy/).
 
