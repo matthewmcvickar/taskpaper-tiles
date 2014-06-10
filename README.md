@@ -30,9 +30,9 @@ A heading for things that recur each day of the week, as well as things to be do
 
 ### Monthly
 
-A heading for each day of the month. If you're familiar with [GTD](http://www.davidco.com/about-gtd), this is something of a tickler file. You can move tasks into this tile from **Todo** if you want to schedule them for a particular day. I use **Monthly** for tasks and all of my events and appointments.
+A heading for each day of the month. If you're familiar with [GTD](http://www.davidco.com/about-gtd), this is something like a tickler file. You can move tasks into this tile from **Todo** if you want to schedule them for a particular day. I use **Monthly** for tasks and all of my events and appointments.
 
-This list can be generated using the [TaskPaper Month Generator](http://taskpaper-month-generator.herokuapp.com) (which has its [own repository](https://github.com/matthewmcvickar/taskpaper-month-generator)). You can use a very simple syntax to add tasks to the generated month.
+This list can be generated using the [TaskPaper Month Generator](http://matthewmcvickar.github.io/taskpaper-month-generator/) (which has its [own repository](https://github.com/matthewmcvickar/taskpaper-month-generator)). You can use a very simple syntax to add tasks to the generated month.
 
 ### Waiting
 
